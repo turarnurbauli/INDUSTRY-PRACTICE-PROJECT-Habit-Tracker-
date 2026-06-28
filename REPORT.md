@@ -4,7 +4,7 @@
 **Group:** SE-2425  
 **Project:** Habit Tracker Web Application  
 **Stack:** HTML, CSS, JavaScript, Node.js, Express, MongoDB  
-**Deployment URL:** [Add your Render/Railway link here]
+**Deployment URL:** https://industry-practice-project-habit-tracker.onrender.com
 
 ---
 
@@ -172,9 +172,9 @@ Authorization: Bearer <token>
 
 ## 8. Deployment
 
-Deployed on: **[Render / Railway / Replit]**
+Deployed on: **Render**
 
-Live URL: **[https://your-app.onrender.com]**
+Live URL: **https://industry-practice-project-habit-tracker.onrender.com**
 
 Environment variables configured in hosting dashboard:
 - `MONGODB_URI`
@@ -200,6 +200,6 @@ HabitFlow meets all project requirements: modular architecture, MongoDB with thr
 | Validation & Error Handling | 10 | Done |
 | Frontend Requirements | 15 | Done |
 | User Features | 10 | Done |
-| Deployment | 10 | Add live URL |
+| Deployment | 10 | Live on Render |
 
 **Total:** 90/100 in code + 10 after deployment
