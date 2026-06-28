@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | HabitFlow</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="/dashboard.html" class="brand"><span class="brand-icon">H</span><span>HabitFlow</span></a>
+        <nav class="nav-links">
+          <button id="themeToggle" class="btn btn-secondary btn-sm" type="button">Dark Mode</button>
+          <a href="/profile.html" class="btn btn-secondary btn-sm">Profile</a>
+          <button id="logoutBtn" class="btn btn-danger btn-sm" type="button">Log Out</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="dashboard-header">
+          <div>
+            <h1>My Habits</h1>
+            <p style="color:var(--text-muted)">Search, filter, and complete your daily routines.</p>
+          </div>
+          <button id="createHabitBtn" class="btn btn-primary" type="button">+ New Habit</button>
+        </div>
+
+        <div id="dashboardAlert"></div>
+
+        <div class="stats-grid">
+          <div class="stat-card"><span>Total habits</span><strong id="statTotal">0</strong></div>
+          <div class="stat-card"><span>Completed today</span><strong id="statCompleted">0</strong></div>
+          <div class="stat-card"><span>Active habits</span><strong id="statActive">0</strong></div>
+          <div class="stat-card"><span>Daily habits</span><strong id="statDaily">0</strong></div>
+        </div>
+
+        <div class="toolbar">
+          <input id="searchInput" class="filter-control" type="search" placeholder="Search habits..." />
+          <select id="frequencyFilter" class="filter-control">
+            <option value="">All frequencies</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+          </select>
+          <select id="categoryFilter" class="filter-control">
+            <option value="">All categories</option>
+            <option value="health">Health</option>
+            <option value="fitness">Fitness</option>
+            <option value="learning">Learning</option>
+            <option value="mindfulness">Mindfulness</option>
+            <option value="productivity">Productivity</option>
+            <option value="other">Other</option>
+          </select>
+          <div style="display:flex;gap:0.5rem;">
+            <button id="applyFiltersBtn" class="btn btn-primary btn-sm" type="button">Apply</button>
+            <button id="resetFiltersBtn" class="btn btn-secondary btn-sm" type="button">Reset</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom:1rem;">
+          <label for="limitSelect">Items per page</label>
+          <select id="limitSelect" class="filter-control" style="max-width:160px;margin-top:0.35rem;">
+            <option value="6">6</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+
+        <div id="habitsContainer" class="habits-grid"></div>
+
+        <div class="pagination">
+          <button id="prevPage" class="btn btn-secondary btn-sm" type="button">Previous</button>
+          <span id="pageInfo">Page 1 of 1</span>
+          <button id="nextPage" class="btn btn-secondary btn-sm" type="button">Next</button>
+        </div>
+      </div>
+    </main>
+
+    <div id="habitModal" class="modal-backdrop hidden">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 id="modalTitle">Create Habit</h2>
+          <button id="closeModalBtn" class="btn btn-secondary btn-sm" type="button">Close</button>
+        </div>
+        <form id="habitForm">
+          <div class="form-group">
+            <label for="habitTitle">Title</label>
+            <input id="habitTitle" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="habitDescription">Description</label>
+            <textarea id="habitDescription" class="form-control" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="habitFrequency">Frequency</label>
+            <select id="habitFrequency" class="form-control">
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="habitCategory">Category</label>
+            <select id="habitCategory" class="form-control">
+              <option value="health">Health</option>
+              <option value="fitness">Fitness</option>
+              <option value="learning">Learning</option>
+              <option value="mindfulness">Mindfulness</option>
+              <option value="productivity">Productivity</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="habitColor">Color</label>
+            <input id="habitColor" class="form-control" type="color" value="#4f46e5" />
+          </div>
+          <div class="form-group">
+            <label><input id="habitActive" type="checkbox" checked /> Active habit</label>
+          </div>
+          <div class="modal-actions">
+            <button id="cancelModalBtn" class="btn btn-secondary" type="button">Cancel</button>
+            <button class="btn btn-primary" type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>

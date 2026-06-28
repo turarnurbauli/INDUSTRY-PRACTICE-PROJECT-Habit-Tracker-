@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HabitFlow | Build Better Daily Routines</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="/" class="brand">
+          <span class="brand-icon">H</span>
+          <span>HabitFlow</span>
+        </a>
+        <nav class="nav-links">
+          <button id="themeToggle" class="btn btn-secondary btn-sm" type="button">Dark Mode</button>
+          <a href="/login.html" class="btn btn-secondary btn-sm" data-auth="guest">Log In</a>
+          <a href="/register.html" class="btn btn-primary btn-sm" data-auth="guest">Sign Up</a>
+          <a href="/dashboard.html" class="btn btn-primary btn-sm hidden" data-auth="user">Dashboard</a>
+          <a href="/profile.html" class="btn btn-secondary btn-sm hidden" data-auth="user">Profile</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <h1>Track habits that improve your real life</h1>
+            <p>
+              HabitFlow helps students and professionals build consistent routines for health,
+              learning, fitness, and productivity with secure authentication and smart filtering.
+            </p>
+            <div class="hero-actions">
+              <a href="/register.html" class="btn btn-primary">Start Free</a>
+              <a href="/login.html" class="btn btn-secondary">I already have an account</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h3>Why HabitFlow?</h3>
+            <ul class="feature-list">
+              <li><span class="feature-dot"></span><span>Create daily and weekly habits with categories and colors</span></li>
+              <li><span class="feature-dot"></span><span>Mark completion, search habits, and filter by frequency</span></li>
+              <li><span class="feature-dot"></span><span>Responsive design with light and dark mode</span></li>
+              <li><span class="feature-dot"></span><span>Secure JWT authentication and MongoDB storage</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Built for a real-world problem</h2>
+          <div class="grid-3">
+            <article class="card">
+              <h3>Consistency</h3>
+              <p>People struggle to maintain routines. HabitFlow makes progress visible every day.</p>
+            </article>
+            <article class="card">
+              <h3>Organization</h3>
+              <p>Search, filter, and paginate habits to focus on what matters right now.</p>
+            </article>
+            <article class="card">
+              <h3>Accountability</h3>
+              <p>Personal profiles and completion logs keep users engaged with their goals.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">HabitFlow &copy; 2026 | Industry Practice Project</div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
