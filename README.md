@@ -2,6 +2,10 @@
 
 Full-stack habit tracking application built for the **Industry Practice Project**.
 
+**Live demo:** https://industry-practice-project-habit-tracker.onrender.com
+
+**Student:** Nurbauli Turar | **Group:** SE-2425
+
 ## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
